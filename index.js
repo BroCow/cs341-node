@@ -18,10 +18,21 @@ app.get('/', (req, res) => res.render('pages/index'))
 //   }
 //   )
 // })
-
+ 
 app.post(function (req, res, next) {
   next();
 });
+
+
+app.get("/rate", (req, res) => {
+  var result = solveMath(req);
+  res.render("pages/results", {
+    answer: result
+  });
+});
+
+
+
 
 app.get("/math", (req, res) => {
   var result = solveMath(req);

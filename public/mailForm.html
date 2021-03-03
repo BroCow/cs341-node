@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  <title>Document</title>
+</head>
+
+<body>
+  <div class="container">
+    <h2>Postage Calculator</h2>
+    <div>
+      <h4>Please enter the weight and service desired below</h4>
+      <form action="/rate" method="GET" id="mailForm">
+        <input type="number" name="weight" required>
+        <select name="operation">
+          <option value="letters_stamped">Letters (Stamped)</option>
+          <option value="letters_metered">Letters (Metered)</option>
+          <option value="largeEnvelope">Large Envelopes (Flats)</option>
+          <option value="firstClass">First-Class Package Service - Retail</option>
+        </select>
+        
+        <input type="submit" name="postage" value="Show Postage Price">
+        <!--<button name="ajax" value="AJAX" onclick="getJson()">Get JSON</button>-->
+      </form>
+      
+      <div id='result'>
+
+      </div>
+
+    </div>
+  </div>
+
+</body>
+<script>
+    /*
+  function getJson() {
+    $("#myForm").submit(function (event) {
+      // let result = document.querySelector('#result');
+      event.preventDefault();
+      console.log("before post");
+      $.ajax({
+          method: "GET",
+          url: "/math_service",
+          data: $("#myForm").serialize(),
+          success: function (res) {
+            console.log('success');
+            let json = JSON.stringify(res);
+            console.log(json);
+            $("#result").text(json);
+          }
+        })
+        .fail(function (message) {
+          console.log('file');
+          $("#response").text(message);
+          console.log(message);
+        });
+    });
+  }
+*/
+
+  // function getJson() {
+  //   $("#myForm").submit(function (event) {
+  //     event.preventDefault();
+  //     fetch('/math_service')
+  //     .then(response => response.json())
+  //     .then(data => console.log(data));
+
+  //   })
+
+
+
+  // }
+</script>
+
+</html>
