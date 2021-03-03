@@ -25,10 +25,15 @@ app.post(function (req, res, next) {
 
 
 app.get("/rate", (req, res) => {
+  console.log("Request received for rate page");
+
+  /*
+  res.write("This is the postal rate page");
   var result = solveMath(req);
   res.render("pages/results", {
     answer: result
-  });
+    
+  });*/
 });
 
 
